@@ -10,7 +10,7 @@ void main() {
         title: Text("Dice"),
         backgroundColor: Colors.cyan.shade900,
       ),
-      // body: DicePage(),
+      body: DicePage(),
     ),
   ));
 }
