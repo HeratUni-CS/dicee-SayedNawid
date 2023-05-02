@@ -1,23 +1,16 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
-  runApp(
-    MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: Text('Dice'),
-        ),
-        body: MyApp(),
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+      backgroundColor: Colors.cyan.shade800,
+      appBar: AppBar(
+        title: Text("Dice"),
+        backgroundColor: Colors.cyan.shade900,
       ),
+      // body: DicePage(),
     ),
-  );
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
+  ));
 }
