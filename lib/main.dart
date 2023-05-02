@@ -23,8 +23,16 @@ class DicePage extends StatefulWidget {
 }
 
 class _DicePageState extends State<DicePage> {
-  
- 
+  int leftCountBtn = 1;
+  int rightCountBtn = 1;
+
+  void callBack() {
+    setState(() {
+      leftCountBtn = Random().nextInt(6) + 1;
+      rightCountBtn = Random().nextInt(6) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -33,7 +41,7 @@ class _DicePageState extends State<DicePage> {
           Expanded(
             child: TextButton(
               onPressed: () {
-               
+                callBack();
               },
               child: Image.asset('images/dice$leftCountBtn.png'),
             ),
@@ -42,7 +50,7 @@ class _DicePageState extends State<DicePage> {
             child: TextButton(
               onPressed: () {
                 setState(() {
-                 
+                  callBack();
                 });
               },
               child: Image.asset("images/dice$rightCountBtn.png"),
